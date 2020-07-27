@@ -1,5 +1,6 @@
 import index from "@/components/index";
 import find from "@/components/find";
+import watch from "@/components/watch";
 
 const routers = [
     {
@@ -10,6 +11,10 @@ const routers = [
         path: '/find',
         name: 'find',
         component: find
+    }, {
+        path: '/watch',
+        name: 'watch',
+        component: watch
     }, {
         path: '*',
         redirect: '/'

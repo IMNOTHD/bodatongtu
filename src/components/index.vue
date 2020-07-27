@@ -57,8 +57,6 @@
                                 {{activeContent[parseInt(activeName)].comment}}
                             </div>
                         </div>
-
-                        <el-button type="warning" plain style="margin-top: 30px">进一步了解</el-button>
                     </div>
                 </div>
             </div>
@@ -319,7 +317,7 @@
                     <div style="height: 500px; width: 400px; box-shadow: 0 2px 12px 0 rgba(0,0,0,.1)">
                         <div style="margin-left: 50px; margin-right: 30px; margin-top: 80px; text-align: center">
                             <div style="font-size: 44px; color: rgb(51, 51, 51); font-weight: 700">
-                                3000m²材料厅
+                                1000m²材料厅
                             </div>
                             <div style="margin-top: 20px; color: rgb(153, 153, 153)">
                                 大型精装体验城，产品应有尽有
@@ -451,8 +449,7 @@
                     "https://cdn-prod.z11.ren/zaojia-ui/2.2.0h/static/img/guangzhanting4.db4d7e8.jpg",
                     "https://cdn-prod.z11.ren/zaojia-ui/2.2.0h/static/img/guangzhanting5.badca4d.jpg",
                     "https://cdn-prod.z11.ren/zaojia-ui/2.2.0h/static/img/guangzhanting6.0d8ca03.jpg"],
-                carouselPic: ["https://cdn-data-prod.z11.ren/data/region_site/banner/10_3849.jpeg",
-                    "https://cdn-data-prod.z11.ren/data/region_site/banner/10_6636.jpeg",
+                carouselPic: ["https://cdn-data-prod.z11.ren/data/region_site/banner/10_6636.jpeg",
                     "https://cdn-data-prod.z11.ren/data/region_site/banner/10_9411.jpeg",
                     "https://cdn-data-prod.z11.ren/data/region_site/banner/10_2083.jpeg",
                     "https://cdn-data-prod.z11.ren/data/region_site/banner/10_3908.png"],

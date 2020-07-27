@@ -3,7 +3,7 @@
         <el-container>
             <el-header style="display: flex">
                 <div style="height: 100%; display: flex; align-items: center">
-                    <v-alert color="deep-purple accent-4" dark style="margin: 0">博大同途</v-alert>
+                    <v-alert color="red lighten-1" dark style="margin: 0">博大同途</v-alert>
                 </div>
                 <el-menu :default-active="activeIndex"
                          class="zj-nav-menu"
@@ -14,8 +14,6 @@
                          active-text-color="#009b74"
                          router>
                     <el-menu-item index="/">首页</el-menu-item>
-                    <el-menu-item index="/person">个性精装</el-menu-item>
-                    <el-menu-item index="/full">全屋软装</el-menu-item>
                     <el-menu-item index="/find">找设计师</el-menu-item>
                     <el-menu-item index="/watch">参观工地</el-menu-item>
                 </el-menu>
@@ -26,7 +24,8 @@
             <el-main>
                 <router-view></router-view>
             </el-main>
-            <el-footer style="font-family: PingFang SC,Microsoft YaHei,Hiragino Sans GB,sans-serif; padding-top: 30px; border-top: 1px solid #e1e1e1">
+            <el-footer
+                    style="font-family: PingFang SC,Microsoft YaHei,Hiragino Sans GB,sans-serif; padding-top: 30px; border-top: 1px solid #e1e1e1">
                 <div style="width: 100%; margin-bottom: 10px">
                     <div style="width: 1200px; display: flex; align-items: center; justify-content: center">
                         <div style="display: block; padding-right: 90px; border-right: 1px solid #e1e1e1">
@@ -69,12 +68,6 @@
                 case '/':
                     this.activeIndex = '/';
                     break;
-                case '/person':
-                    this.activeIndex = '/person';
-                    break;
-                case '/full':
-                    this.activeIndex = '/full';
-                    break;
                 case '/find':
                     this.activeIndex = '/find';
                     break;
@@ -103,14 +96,35 @@
 </script>
 
 <style>
-    html, body, #app {
-        width: 100%;
-        height: 100%;
-        margin: 0px;
-        font-family: PingFang SC,Microsoft YaHei,Hiragino Sans GB,sans-serif;
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
     }
 
-    .el-header, .el-footer {
+    body {
+        min-width: 1200px;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        font-family: PingFang SC, Microsoft YaHei, Hiragino Sans GB, sans-serif;
+    }
+
+    html, #app {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        font-family: PingFang SC, Microsoft YaHei, Hiragino Sans GB, sans-serif;
+    }
+
+
+    .el-footer {
+        padding: 0 !important;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .el-header {
         margin: 0 auto;
         text-align: center;
     }
@@ -118,6 +132,9 @@
     .el-main {
         padding: 0 !important;
     }
+
+
+
 </style>
 
 <style scoped>
