@@ -18,7 +18,7 @@
           <el-menu-item index="/watch">参观工地</el-menu-item>
         </el-menu>
         <div style="height: 100%; display: flex; align-items: center">
-          <v-btn depressed color="success">咨询电话：18106886608</v-btn>
+          <v-btn depressed color="success" @click="copyPhone">咨询电话：{{phone}}</v-btn>
         </div>
       </el-header>
       <el-main>
@@ -26,7 +26,7 @@
       </el-main>
       <el-footer
           style="font-family: PingFang SC,Microsoft YaHei,Hiragino Sans GB,sans-serif; padding-top: 30px; border-top: 1px solid #e1e1e1">
-        <div style="width: 100%; margin-bottom: 10px">
+        <div style="width: 100%; margin-bottom: 10px; margin-top: 12px">
           <div style="width: 1200px; display: flex; align-items: center; justify-content: center">
             <div style="display: block; padding-right: 90px; border-right: 1px solid #e1e1e1">
               <div style="text-align: left;margin-bottom: 10px; color: rgb(153, 153, 153)">
@@ -61,6 +61,7 @@ export default {
     return {
       render: true,
       activeIndex: '/',
+      phone: '18106886608',
     }
   },
   mounted() {
@@ -90,7 +91,15 @@ export default {
       this.$nextTick(() => {
         this.render = true;
       })
-    }
+    },
+    copyPhone() {
+      this.$copyText(this.phone).then(() => {
+        this.$notify({
+          title:'复制成功！',
+          type:'success'
+        })
+      }, () => {})
+    },
   }
 }
 </script>
